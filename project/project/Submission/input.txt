@@ -1,0 +1,14 @@
+
+
+//for keystore-by user
+String keystore-type
+String keystore-path
+String keystore-alias
+String keystore-password
+
+//Algorithms-by me
+"AES/CBC/PKCS5Padding" : for symmetric-encrypt-data 
+"RSA/ECB/PKCS1Padding" : for encrypt-secret-key
+"SHA256withRSA" : for digital-signature
+"AES" : for secret-random-key
+

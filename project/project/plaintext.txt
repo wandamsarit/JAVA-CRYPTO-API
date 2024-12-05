@@ -1,0 +1,35 @@
+original file to encrypt .
+original file to encrypt .
+original file to encrypt .
+
+1. create FileReader: set(File) to(byte[]);
+2. keyStore: create, get: private-key, public-key;
+3. encryption
+4. UPDATE: encrypted-file, encryption-info-File
+
+//Files
+0.1. FileReader
+0.2. FileWriter
+0.3. FilePrinter
+
+//keyStore
+1.1. create keyStore
+1.2. create private-key
+1.3. create public-key
+
+//encryption
+//encrypt-data
+2.1. GET: original-file-byte[]
+2.2. create symmetric key (GenerateKey)
+2.3. encrypt file-byte[]
+2.4. UPDATE: encryptedFile-byte[], ivParamterSpec
+
+//encrypt-key
+3.1. GET: public-key of the Decrypter-keyStore, symmetric-key
+3.2. encrypt-symmetric-key
+3.3. UPDATE: encryptedFile-symmetric-key
+
+//digital-signature
+4.1. GET: encryptedFile, private-key-encrypter-keyStore
+4.2. set: signature on encryptedFile
+4.3. UPDATE: signature-byte[], encryptedFile-as-singed

@@ -1,0 +1,7 @@
+
+
+javac Decryption.class Encryption.class
+
+project.jar //for the the two projects
+encryption.jar //for export data and functions out
+decryption.jar //for export data and functions out

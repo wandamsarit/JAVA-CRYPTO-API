@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\moshe\\Desktop\\KeyStoreCryptoProject\\New folder\\project\\Encryption\\Encryption.jar"
+    ]
+}

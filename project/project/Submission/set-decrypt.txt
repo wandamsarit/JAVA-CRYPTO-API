@@ -1,0 +1,24 @@
+
+getting 2 Files: EncryptedFile.txt (data-encrypted), EncryptionInfo.txt (for Decrypter)
+
+1-setting keys from keystore by keystore-path keystore-alias keystore-password from input
+privateKey: of the owner of the keystore // for Decryption
+publicKey: of the keystore that hava entry to this keystore, the trusted-cert owner // for Digital_Signature
+
+2-Decrypt secret key: algorithm = RSA/ECB/PKCS1Padding
+with symmetric-key of encryption from EncryptionInfo.txt 
+
+3-Decrypt data: algorithm = AES/CBC/PKCS5Padding
+Decrypt the data with the IV-Parameters and with Decrypted-secret-key
+
+4-Encrypt secret-key: algorithm = RSA/ECB/PKCS1Padding
+encrypt the secret-symmetric-key with the alg with public-trusted-keystore-key
+
+5-check- Digital_Signature: algorithm = SHA256withRSA
+with digital-signature of encryption from EncryptionInfo.txt 
+
+6-read EncryptionInfo.txt : 
+setting from encryption: secret-key-encrypted of the symmetric-key , IV-Parameters of the data-encryption, signature of the original-File
+
+
+we will get 1 Files: DecryptedFile.txt that will be the same as the plaintext.txt that was encrypted
